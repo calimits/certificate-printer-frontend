@@ -1,0 +1,15 @@
+mejorar:
+-arreglar la logica de errors en signinform para q no sea negandola
+-en siginform, loginform, y logoutpage, siempre que se pueda encapsular la logica
+en funciones con nombres descriptivos
+-login y logout con httpOnly cookies, necesita cambio aqui y en la api
+
+
+to do:
+-poner codigo q haga algo en submit de login en la parte del catch
+-agragar ventanas modales en certificate form
+-pintar mejor el fileForm
+
+
+-falta la impresion de certificates -----hacer de ultimo
+-poner bien la fecha

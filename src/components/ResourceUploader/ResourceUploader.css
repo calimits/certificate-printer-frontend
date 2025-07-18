@@ -1,0 +1,10 @@
+.container-uploader{
+    border: solid .02rem gray;
+    border-radius: 1rem;
+    padding: 1rem;
+    box-shadow: .4rem .3rem .2rem .5rem rgba(0, 0, 0, .1);
+}
+
+.uploader-item{
+    padding: .5rem;
+}

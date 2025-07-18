@@ -1,0 +1,9 @@
+
+.form-react{
+    border: solid .05rem gray;
+    border-radius: .5rem;
+    box-shadow: 0.2rem 0.2rem 0.2rem 0.2rem rgba(0, 0, 0, 0.1);
+    padding: 1rem;
+    min-width: 18rem;
+    max-width: 22rem;
+}

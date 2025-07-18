@@ -1,0 +1,16 @@
+
+
+
+.container{
+    width: 95%;
+    margin: 1rem auto;
+}
+
+.decoration-none{
+    text-decoration: none;
+}
+
+.center{
+    text-align: center;
+    margin: 1rem auto
+}

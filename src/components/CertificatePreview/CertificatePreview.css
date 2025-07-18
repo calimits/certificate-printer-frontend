@@ -1,0 +1,14 @@
+
+.certificate{
+    margin: 1rem;
+    cursor: pointer;
+    transition: all .2s ease;
+}
+
+.certificate:hover{
+    transform: scale(1.05);
+}
+
+.check{
+    float: left;
+}

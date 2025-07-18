@@ -1,0 +1,17 @@
+
+.page-body{
+    overflow: hidden;
+    padding: 1.5rem;
+    margin: 1.5rem;
+    text-align: center;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    border: solid .05rem rgb(179, 177, 177);
+    border-radius: 1rem;
+    box-shadow: .2rem .2rem .2rem .3rem rgba(0, 0, 0, .05);
+}
+
+.title-h4{
+    padding: 1rem;
+}

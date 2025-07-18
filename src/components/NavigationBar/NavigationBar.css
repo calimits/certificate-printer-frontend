@@ -1,0 +1,13 @@
+
+.no-back{
+    background-color: transparent;
+    transition: all ease .1s;
+}
+
+.no-border{
+    border: none;
+}
+
+.hover-scale:hover{
+    transform: scale(1.2);
+}

@@ -1,0 +1,10 @@
+
+.hover-transform-scale:hover{
+    transform: scale(1.05);
+}
+
+.link-card{
+    transition: all ease .2s;
+    cursor: pointer;
+    max-width: 18rem;
+}

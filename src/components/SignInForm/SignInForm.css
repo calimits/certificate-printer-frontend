@@ -1,0 +1,15 @@
+
+.signin-container{
+    height: 85%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.title{
+    padding: .4rem;
+}
+
+.color-red{
+    color: rgb(179, 176, 176);
+}

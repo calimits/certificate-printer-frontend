@@ -1,0 +1,10 @@
+.link{
+    display: block;
+    text-decoration: none;
+    padding: .2rem;
+    margin: .2rem;
+}
+
+.title{
+    padding: .4rem;
+}

@@ -1,0 +1,52 @@
+.window-container{
+    position: fixed;
+    top: 0;
+    background-color: rgba(0, 0, 0, .2);
+    z-index: 999;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.window{
+    width: 70%;
+    border-radius: 2rem;
+    border: solid .05rem gray ;
+    box-shadow: .2rem .3rem .1rem .1rem rgba(0, 0, 0, .2);
+    display: flex;
+    flex-wrap: wrap;
+    flex-flow: column;
+    align-items: center;
+    max-width: 25rem;
+    background-color: white;
+}
+
+.img-flex{
+    display: flex;
+    flex-wrap: wrap;
+    flex-flow: column;
+    max-height: 10rem;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+.window-item{
+    margin: 1rem;
+    padding-left: .5rem;
+    padding-right: .5rem;
+}
+
+.img-item{
+    margin: .5rem;
+    padding: .5rem;
+    border: solid .02rem rgb(218, 218, 218);
+    border-radius: 1rem;
+    transition: all ease .2s;
+    cursor: pointer;
+}
+
+.img-item:hover{
+    transform: scale(1.02);
+}
