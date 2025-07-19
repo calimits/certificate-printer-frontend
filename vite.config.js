@@ -6,3 +6,5 @@ export default defineConfig({
   plugins: [react()],
   base: '/certificate-printer-frontend/'
 })
+
+//https://calimits.github.io/certificate-printer-frontend/
