@@ -56,6 +56,7 @@ const CertificatePreview = ({ cert, to, allowDeleting, setAllowDeleting,
 
     return (
             <div onMouseDown={isAuth ? startDeleteUse : null} onMouseUp={isAuth ? allowDeleteUse : null} 
+                 onTouchStart={isAuth ? startDeleteUse : null} onTouchEnd={isAuth ? allowDeleteUse : null}  
                  className="card text-center certificate"  
                  onClick={allowDeleting ? (e)=>{} : handleClick4Navigate2Cert}>
                 <div className="card-header">
