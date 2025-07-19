@@ -54,7 +54,7 @@ function App() {
 
   return (
     <>
-      <HashRouter basename='/certificate-printer-frontend'>
+      <HashRouter>
           <NavigationBar linkTo="http://www.github.com"
             title="Certificate Printer"
             links={!isAuth ? links.linksVisitor : links.linksUser}
