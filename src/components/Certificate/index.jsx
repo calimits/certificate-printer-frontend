@@ -52,6 +52,7 @@ const Certificate = () => {
     const footerRef = useRef(null);
     const api = helphttp();
     const domain = "https://calimits.github.io/certificate-printer-frontend";
+    //vamos
 
     const handleDownload = (e) => {
         e.preventDefault();
