@@ -51,7 +51,7 @@ const Certificate = () => {
     const headerRef = useRef(null);
     const footerRef = useRef(null);
     const api = helphttp();
-    const domain = "http://localhost:5175";
+    const domain = "https://calimits.github.io/certificate-printer-frontend";
 
     const handleDownload = (e) => {
         e.preventDefault();
