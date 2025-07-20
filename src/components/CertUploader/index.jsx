@@ -37,6 +37,7 @@ const processExcel = async (data) => {
         })
         rowNumber != 1 ? cert.username = username : null;
         rowNumber != 1 ? certs.push(cert) : null;
+        cert = {};
     })
 
     return certs;
@@ -73,6 +74,7 @@ const CertUploader = ({handleData, opDone, message, error}) => {
             let certarray = await processExcel(data);
             setIsParsed(true);
             setCerts(certarray);
+            console.log(certarray) //
         } catch (error) {
             console.log(error);
         }
@@ -88,6 +90,7 @@ const CertUploader = ({handleData, opDone, message, error}) => {
             })
             setIsProcessed(true);
             setFormData(auxCerts);
+            console.log(auxCerts); //
         }
     }
 
