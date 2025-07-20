@@ -85,7 +85,7 @@ const Certificate = () => {
 
         //Printing role, type and typename
         if (cert.role) {
-            const roleText = `Por su participación como ${cert.role} en ${cert.type} ${cert.typename}`;
+            const roleText = `Por su participación como ${cert.role} en ${cert.typename}`;
             currentY = addText2PDF(doc, roleText, xCord, currentY, 16);
         }
 
@@ -109,9 +109,9 @@ const Certificate = () => {
 
         //PrintingCanvas 
         doc.addImage(qrCanvasRef.current, "JPEG", 
-            (doc.internal.pageSize.getWidth() / 2) - qrCanvasRef.current.width / 4, 
-            currentY, qrCanvasRef.current.width / 2, qrCanvasRef.current.height / 2);
-        currentY += qrCanvasRef.current.height / 2 
+            (doc.internal.pageSize.getWidth() / 2) - qrCanvasRef.current.width / 8, 
+            currentY, qrCanvasRef.current.width / 4, qrCanvasRef.current.height / 4);
+        currentY += qrCanvasRef.current.height / 4; 
         
         
         //printing footer
@@ -155,7 +155,7 @@ const Certificate = () => {
             {!cert.role ? <h5>{cert.description}</h5> : null}
             {cert.role ? 
                 (<div>
-                    <h5>Por su participación como {cert.role} en {cert.type} {cert.typename}</h5>
+                    <h5>Por su participación como {cert.role} en {cert.typename}</h5>
                 </div>) : (null)}
             {cert.role.toLowerCase() === "ponente" ||
              cert.role.toLowerCase() === "tutor" ||
