@@ -1,7 +1,7 @@
 
 //https://certificate-printer-server.onrender.com
 //http://localhost:3000
-const urlAndDomainName = "http://localhost:3000";
+const urlAndDomainName = "https://certificate-printer-server.onrender.com";
 const URLs = {
         getUser: `${urlAndDomainName}/api-cert-printer/users`,
         getAllUsers: `${urlAndDomainName}/api-cert-printer/users`,
