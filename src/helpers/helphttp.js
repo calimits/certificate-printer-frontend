@@ -12,7 +12,7 @@ export const helphttp = () => {
         options.body = JSON.stringify(options.body) || false;
         if (!options.body) delete options.body;
 
-        setTimeout(() => { controller.abort() }, 10000);
+        setTimeout(() => { controller.abort() }, 30000);
 
         return fetch(endpoint, options)
             .then(res => res.ok ? res.json() : Promise.reject({
