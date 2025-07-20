@@ -69,7 +69,7 @@ const CertificatePreview = ({ cert, to, allowDeleting, setAllowDeleting,
                     {isAuth ? <button onClick={handleClick} to="/edit-certificate" className="btn btn-primary">Edit</button> : null}
                 </div>
                 <div className="card-footer text-body-secondary">
-                    {cert.date}
+                    {cert.date.substring(0,10)}
                 </div>
             </div>
     )
