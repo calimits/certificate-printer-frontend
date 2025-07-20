@@ -80,7 +80,7 @@ const Certificate = () => {
         //printing description
         if (!cert.role) {
             const descriptionText = cert.description;
-            currentY = addText2PDF(doc, descriptionText, xCord, currentY,12);
+            currentY = addText2PDF(doc, descriptionText, xCord, currentY,16);
         }
 
         //Printing role, type and typename
@@ -90,11 +90,13 @@ const Certificate = () => {
         }
 
         //Printing workName
-        if (cert.role.toLowerCase() === "ponente" ||
+        if (cert.role) {
+            if (cert.role.toLowerCase() === "ponente" ||
             cert.role.toLowerCase() === "tutor" ||
             cert.role.toLowerCase() === "oponente") {
                 const workText = cert.workname;
                 currentY = addText2PDF(doc, workText, xCord, currentY, 16);
+        }
         }
 
         //Printing tome and folio
@@ -157,11 +159,12 @@ const Certificate = () => {
                 (<div>
                     <h5>Por su participación como {cert.role} en {cert.typename}</h5>
                 </div>) : (null)}
-            {cert.role.toLowerCase() === "ponente" ||
+            {cert.role ? cert.role.toLowerCase() === "ponente" ||
              cert.role.toLowerCase() === "tutor" ||
              cert.role.toLowerCase() === "oponente" ? (
                 <h5><i>{cert.workname}</i></h5>
-             ) : (null)}
+             ) : (null) : null}
+            
             {cert.tome && cert.folio ? <h6>Registrado al tomo {cert.tome}, folio {cert.folio}</h6> : null} 
             <h6>Fecha de emisión: {cert.date.substring(0,10)}</h6> 
             <canvas ref={qrCanvasRef}>QR Code</canvas>

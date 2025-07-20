@@ -74,7 +74,7 @@ const CertUploader = ({handleData, opDone, message, error}) => {
             let certarray = await processExcel(data);
             setIsParsed(true);
             setCerts(certarray);
-            console.log(certarray) //
+            //console.log(certarray) //
         } catch (error) {
             console.log(error);
         }
