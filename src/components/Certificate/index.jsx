@@ -77,26 +77,28 @@ const Certificate = () => {
         const namesText =`A ${cert.names}`; 
         currentY = addText2PDF(doc, namesText, xCord, currentY, 20)
         
-        //printing description
-        if (!cert.role) {
-            const descriptionText = cert.description;
-            currentY = addText2PDF(doc, descriptionText, xCord, currentY,16);
-        }
 
         //Printing role, type and typename
         if (cert.role) {
-            const roleText = `Por su participación como ${cert.role} en ${cert.typename}`;
+            const roleText = `Por su participación como ${cert.role} en el ${cert.type}: ${cert.typename}`;
             currentY = addText2PDF(doc, roleText, xCord, currentY, 16);
         }
 
         //Printing workName
         if (cert.role) {
-            if (cert.role.toLowerCase() === "ponente" ||
-            cert.role.toLowerCase() === "tutor" ||
-            cert.role.toLowerCase() === "oponente") {
+            if (cert.role.includes(String.prototype.toLowerCase("ponente")) ||
+             cert.role.includes(String.prototype.toLowerCase("autor")) ||
+             cert.role.includes(String.prototype.toLowerCase("tutor")) ||
+             cert.role.includes(String.prototype.toLowerCase("oponente"))) {
                 const workText = cert.workname;
                 currentY = addText2PDF(doc, workText, xCord, currentY, 16);
         }
+        }
+
+        //printing description
+        if (cert.description) {
+            const descriptionText = cert.description;
+            currentY = addText2PDF(doc, descriptionText, xCord, currentY,16);
         }
 
         //Printing tome and folio
@@ -138,6 +140,7 @@ const Certificate = () => {
 
     useEffect(()=>{
         fetchCert();
+        console.log(cert)
     }, []);
 
     useEffect(()=>{
@@ -154,17 +157,17 @@ const Certificate = () => {
         <div className="cert">
             <img onLoad={()=>setHeaderLoaded(true)} ref={headerRef} src={cert.header} alt="header"/>
             <h3>A {cert.names}</h3>
-            {!cert.role ? <h5>{cert.description}</h5> : null}
             {cert.role ? 
                 (<div>
-                    <h5>Por su participación como {cert.role} en {cert.typename}</h5>
+                    <h5>Por su participación como {cert.role} en el {cert.type}: {cert.typename}</h5>
                 </div>) : (null)}
-            {cert.role ? cert.role.toLowerCase() === "ponente" ||
-             cert.role.toLowerCase() === "tutor" ||
-             cert.role.toLowerCase() === "oponente" ? (
+            {cert.role ? cert.role.includes(String.prototype.toLowerCase("ponente")) ||
+             cert.role.includes(String.prototype.toLowerCase("autor")) ||
+             cert.role.includes(String.prototype.toLowerCase("tutor")) ||
+             cert.role.includes(String.prototype.toLowerCase("oponente")) ? (
                 <h5><i>{cert.workname}</i></h5>
              ) : (null) : null}
-            
+            {cert.description ? <h5>{cert.description}</h5> : null}
             {cert.tome && cert.folio ? <h6>Registrado al tomo {cert.tome}, folio {cert.folio}</h6> : null} 
             <h6>Fecha de emisión: {cert.date.substring(0,10)}</h6> 
             <canvas ref={qrCanvasRef}>QR Code</canvas>

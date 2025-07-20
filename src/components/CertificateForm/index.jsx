@@ -41,7 +41,8 @@ const CertificateForm = ({ handleData, opDone, message, error, certData }) => {
             <h3>A <InputForm handleChange={handleChange} type="text" id="names" placeholder="names" className={classes}
                              required defaultValue={certData.names ? certData.names : ""} /></h3>
             <textarea name="description" id="description" placeholder="description" className="cert-input"
-                      defaultValue={certData.description ? certData.description : ""}></textarea>
+                      defaultValue={certData.description ? certData.description : ""}
+                      onChange={handleChange}></textarea>
             <div>
                 <h5>Por su participación como
                     <InputForm handleChange={handleChange} id="role" type="text" placeholder="role" className={classes} 
